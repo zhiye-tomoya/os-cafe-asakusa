@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -23,11 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang='en'>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header className='flex justify-between items-center px-8 py-4 text-white bg-gray-800'>
+          <Link href='/' className='text-5xl'>
+            os cafe asa
+          </Link>
+          <nav className='flex gap-8 text-xl'>
+            <Link href='/lunch'>lunch</Link>
+            <Link href='/cafe'>cafe</Link>
+            <Link href='/dinner'>dinner</Link>
+          </nav>
+        </header>
         {children}
+        <footer>footer</footer>
       </body>
     </html>
   );
