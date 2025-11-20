@@ -24,20 +24,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header className='flex justify-between items-center px-8 py-4 text-white bg-gray-800'>
-          <Link href='/' className='text-5xl'>
-            os cafe asa
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <header className="flex justify-between items-center px-8 py-4 text-[#5d3510] bg-[#fff4e5]">
+          <Link href="/" className="text-5xl">
+            OTHER Space
           </Link>
-          <nav className='flex gap-8 text-xl'>
-            <Link href='/lunch'>lunch</Link>
-            <Link href='/cafe'>cafe</Link>
-            <Link href='/dinner'>dinner</Link>
+          <nav className="flex gap-8 text-xl">
+            <Link href="/lunch">lunch</Link>
+            <Link href="/cafe">cafe</Link>
+            <Link href="/dinner">dinner</Link>
           </nav>
         </header>
         {children}
-        <footer>footer</footer>
+        <footer className="bg-[#5d3510] text-[#fff4e5] py-64">footer</footer>
       </body>
     </html>
   );
